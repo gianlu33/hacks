@@ -33,3 +33,19 @@ Then run `sudo systemctl enable <something>` so that it will be ran at startup.
 
 Not sure about other parameters, not sure about `forking` type either. Check it
 out.
+
+## X11 forwarding
+
+- /etc/ssh/sshd_config : enable all X11-related stuff
+- sudo service ssh reload
+
+connect: ssh -X ...
+
+firefox: export XAUTHORITY=$HOME/.Xauthority
+maybe try xlinks2 browser
+
+try ssh -C for data compression
+
+need to install: xauth 
+
+maybe if it doesn't work try installing xinit fluxbox
